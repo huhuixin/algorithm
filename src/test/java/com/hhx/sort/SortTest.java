@@ -1,34 +1,28 @@
 package com.hhx.sort;
 
 import com.hhx.entity.User;
+import com.hhx.sort.method.*;
+import com.hhx.util.Arrays;
+import com.hhx.util.IArrayFactory;
 import com.hhx.util.RandomUtil;
 import com.hhx.util.factory.CustomArrayFactory;
 import com.hhx.util.factory.RandomArrayFactory;
 import com.hhx.util.factory.decorator.DistinctArrayDecorator;
 import com.hhx.util.factory.decorator.ReverseArrayDecorator;
 import com.hhx.util.factory.decorator.SortArrayDecorator;
-import com.hhx.sort.method.*;
-import com.hhx.util.Arrays;
-import com.hhx.util.IArrayFactory;
 import org.junit.After;
 import org.junit.Test;
 
-import java.util.Comparator;
-import java.util.function.Function;
 import java.util.function.Supplier;
+
+import static com.hhx.Constant.*;
 
 public class SortTest {
 
-    private static Comparator<User> sortByAgeAsc = Comparator.comparingInt(User::getAge);
-    private static Comparator<User> sortByNameAsc = Comparator.comparing(User::getName);
-
-    private static Function<User, String> showAge = user -> user == null?"":user.getAge() + "";
-    private static Function<User, String> showName = user -> user == null?"":user.getName() + "";
-
-    private static Supplier<User> randomSupplier = () ->
-        new User()
-                .setAge(RandomUtil.randomInt(0, 5))
-                .setName(RandomUtil.randomLetterString(1).toLowerCase());
+    public static Supplier<User> randomSupplier = () ->
+            new User()
+                    .setAge(RandomUtil.randomInt(0, 5))
+                    .setName(RandomUtil.randomLetterString(1).toLowerCase());
 
     private static IArrayFactory<User> randomArrayFactory =
             new RandomArrayFactory<>(randomSupplier, 10);
@@ -37,22 +31,22 @@ public class SortTest {
 
     @Test
     public void bubbleTestRandom() {
-        sort = new Bubble<>(randomArrayFactory, sortByAgeAsc);
+        sort = new Bubble<>(randomArrayFactory, compareByAgeAsc);
     }
 
     @Test
     public void InsertTestRandom() {
-        sort = new Insert<>(randomArrayFactory, sortByAgeAsc, showAge);
+        sort = new Insert<>(randomArrayFactory, compareByAgeAsc, showAge);
     }
 
     @Test
     public void SelectTestRandom() {
-        sort = new Select<>(randomArrayFactory, sortByAgeAsc, showAge);
+        sort = new Select<>(randomArrayFactory, compareByAgeAsc, showAge);
     }
 
     @Test
     public void QuickTestRandom() {
-          sort = new Quick<>(randomArrayFactory, sortByAgeAsc, showAge);
+          sort = new Quick<>(randomArrayFactory, compareByAgeAsc, showAge);
 //        IArrayFactory<Integer> factory = new CustomArrayFactory<>(new Integer[]{53, 31, 39, 36, 42, 28, 74, 68, 11, 6});
 //        factory = new SortArrayDecorator<>(factory, Integer::compareTo);
 //        factory = new ReverseArrayDecorator<>(factory, Integer::compareTo);
@@ -62,7 +56,7 @@ public class SortTest {
 
     @Test
     public void MergeTestRandom() {
-        sort = new Merge<>(randomArrayFactory, sortByNameAsc, showAge);
+        sort = new Merge<>(randomArrayFactory, compareByNameAsc, showAge);
     }
 
     @Test
@@ -77,9 +71,9 @@ public class SortTest {
         System.out.println(Arrays.toString(randomArrayFactory.getArray(), showAge));
         randomArrayFactory = new ReverseArrayDecorator<>(randomArrayFactory, null);
         System.out.println(Arrays.toString(randomArrayFactory.getArray(), showAge));
-        randomArrayFactory = new SortArrayDecorator<>(randomArrayFactory, sortByAgeAsc);
+        randomArrayFactory = new SortArrayDecorator<>(randomArrayFactory, compareByAgeAsc);
         System.out.println(Arrays.toString(randomArrayFactory.getArray(), showAge));
-        randomArrayFactory = new DistinctArrayDecorator<>(randomArrayFactory, sortByAgeAsc);
+        randomArrayFactory = new DistinctArrayDecorator<>(randomArrayFactory, compareByAgeAsc);
         System.out.println(Arrays.toString(randomArrayFactory.getArray(), showAge));
     }
 
