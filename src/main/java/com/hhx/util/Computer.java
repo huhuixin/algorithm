@@ -1,4 +1,4 @@
-package com.hhx.leetcode.util;
+package com.hhx.util;
 
 /**
  * 计算

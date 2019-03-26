@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 import java.util.Arrays;
 
@@ -19,7 +19,7 @@ import java.util.Arrays;
 public class P0905SortArrayByParity {
 
     public static void main(String[] args) {
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
             System.out.println(
                     Arrays.toString(new Solution().sortArrayByParity(new int[]{3, 1, 2, 4}))
             )

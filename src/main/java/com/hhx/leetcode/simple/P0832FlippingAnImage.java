@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 import java.util.Arrays;
 
@@ -28,7 +28,7 @@ import java.util.Arrays;
 public class P0832FlippingAnImage {
 
     public static void main(String[] args) {
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
             System.out.println(
                     Arrays.deepToString(new Solution().flipAndInvertImage(new int[][]{
                             new int[]{1, 1, 0, 0},
@@ -37,7 +37,7 @@ public class P0832FlippingAnImage {
                             new int[]{1, 0, 1, 0}}))
             )
         );
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
                 System.out.println(
                         Arrays.deepToString(new Solution1().flipAndInvertImage(new int[][]{
                                 new int[]{1, 1, 0},

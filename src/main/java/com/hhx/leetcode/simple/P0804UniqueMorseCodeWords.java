@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,7 +38,7 @@ import java.util.Set;
 public class P0804UniqueMorseCodeWords {
 
     public static void main(String[] args) {
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
             System.out.println(
                 new Solution()
                         .uniqueMorseRepresentations(new String[]{

@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 /**
  * 两个整数之间的汉明距离指的是这两个数字对应二进制字符串
@@ -17,7 +17,7 @@ import com.hhx.leetcode.util.Utils;
 public class P0461HammingDistance {
 
     public static void main(String[] args) {
-        Utils.compareTime(100,
+        RunUtils.compareTime(100,
                 () -> new Solution().hammingDistance(1, 4),
                 () -> new Solution1().hammingDistance(1, 4)
         );

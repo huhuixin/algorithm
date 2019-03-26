@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -27,17 +27,17 @@ import java.util.LinkedList;
 public class P0771JewelsAndStones {
 
     public static void main(String[] args) {
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
                 System.out.println(
                         new Solution().numJewelsInStones("aAdssd", "asdadadfasfasfsafdaAAbbbb")
                 )
         );
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
             System.out.println(
                     new Solution1().numJewelsInStones("aAdssd", "asdadadfasfasfsafdaAAbbbb")
             )
         );
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
             System.out.println(
                     new Solution2().numJewelsInStones("aAdssd", "asdadadfasfasfsafdaAAbbbb")
             )
@@ -52,7 +52,7 @@ public class P0771JewelsAndStones {
                 for (char s : S.toCharArray()) {
                     if(j == s){
                         // 每次对比宝石是否相同,要消耗一定时间
-                        //Utils.work(100);
+                        //RunUtils.work(100);
                         count ++;
                     }
                 }
@@ -74,7 +74,7 @@ public class P0771JewelsAndStones {
                 while (iterator.hasNext()) {
                     // 如果这个是否是宝石A 那就不可能是宝石B, 直接移除
                     if(iterator.next() == j){
-                        //Utils.work(100);
+                        //RunUtils.work(100);
                         iterator.remove();
                         count ++;
                     }

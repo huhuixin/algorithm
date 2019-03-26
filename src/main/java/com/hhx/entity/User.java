@@ -1,4 +1,4 @@
-package com.hhx.sort;
+package com.hhx.entity;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

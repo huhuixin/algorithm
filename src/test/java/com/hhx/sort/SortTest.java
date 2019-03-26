@@ -1,19 +1,21 @@
 package com.hhx.sort;
 
-import com.hhx.leetcode.util.RandomUtil;
-import com.hhx.sort.factory.CustomArrayFactory;
-import com.hhx.sort.factory.RandomArrayFactory;
-import com.hhx.sort.factory.decorator.DistinctArrayDecorator;
-import com.hhx.sort.factory.decorator.ReverseArrayDecorator;
-import com.hhx.sort.factory.decorator.SortArrayDecorator;
+import com.hhx.entity.User;
+import com.hhx.util.RandomUtil;
+import com.hhx.util.factory.CustomArrayFactory;
+import com.hhx.util.factory.RandomArrayFactory;
+import com.hhx.util.factory.decorator.DistinctArrayDecorator;
+import com.hhx.util.factory.decorator.ReverseArrayDecorator;
+import com.hhx.util.factory.decorator.SortArrayDecorator;
 import com.hhx.sort.method.*;
+import com.hhx.util.Arrays;
+import com.hhx.util.IArrayFactory;
 import org.junit.After;
 import org.junit.Test;
 
 import java.util.Comparator;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class SortTest {
 

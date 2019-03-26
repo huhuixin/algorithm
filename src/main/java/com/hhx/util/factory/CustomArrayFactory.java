@@ -1,4 +1,4 @@
-package com.hhx.sort.factory;
+package com.hhx.util.factory;
 
 /**
  * 指定数组
