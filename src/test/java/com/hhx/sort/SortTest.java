@@ -13,7 +13,6 @@ import org.junit.Test;
 import java.util.Comparator;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class SortTest {
 
@@ -21,7 +20,7 @@ public class SortTest {
     private static Comparator<User> sortByNameAsc = Comparator.comparing(User::getName);
 
     private static Function<User, String> showAge = user -> user == null?"":user.getAge() + "";
-    private static Function<User, String> showName = user -> user == null?"":user.getName() + "";
+    private static Function<User, String> showName = user -> user == null?"":user.getName();
 
     private static Supplier<User> randomSupplier = () ->
         new User()
