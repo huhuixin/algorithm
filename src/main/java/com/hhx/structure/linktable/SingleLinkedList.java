@@ -5,10 +5,20 @@ package com.hhx.structure.linktable;
  *
  * @author hhx
  */
-public class SingleLinkedList<E> extends AbstractLinkedList<E> {
+public class SingleLinkedList<E> {
 
     private Node<E> head;
     private Node<E> last;
+
+    protected int length;
+
+    public int size() {
+        return length;
+    }
+
+    public boolean isEmpty() {
+        return size() == 0;
+    }
 
     private static class Node<E> {
         E item;
@@ -18,7 +28,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         }
     }
 
-    @Override
     public boolean addFirst(E e){
         if(head == null){
             head = new Node<>(e);
@@ -31,12 +40,18 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         return true;
     }
 
-    @Override
     public boolean addLast(E e){
-        return add(e);
+        if(head == null){
+            head = new Node<>(e);
+            last = head;
+        } else {
+            last.next = new Node<>(e);
+            last = last.next;
+        }
+        length++;
+        return true;
     }
 
-    @Override
     public boolean removeFirst(){
         if(head == null){
             return false;
@@ -45,7 +60,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         return true;
     }
 
-    @Override
     public boolean removeLast(){
         if(head == null){
             return false;
@@ -66,7 +80,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         return true;
     }
 
-    @Override
     public E getFirst(){
         if(head != null){
             return head.item;
@@ -74,7 +87,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         return null;
     }
 
-    @Override
     public E getLast(){
         if(last != null){
             return last.item;
@@ -82,20 +94,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         return null;
     }
 
-    @Override
-    public boolean add(E e) {
-        if(head == null){
-            head = new Node<>(e);
-            last = head;
-        } else {
-            last.next = new Node<>(e);
-            last = last.next;
-        }
-        length++;
-        return true;
-    }
-
-    @Override
     public boolean remove(E e) {
         if(head == null){
             return false;
@@ -118,7 +116,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
         return true;
     }
 
-    @Override
     public boolean contains(E e) {
         if(head == null){
             return false;
@@ -154,7 +151,6 @@ public class SingleLinkedList<E> extends AbstractLinkedList<E> {
      *    4, 3, 2, 1, 5
      * 5, 4, 3, 2, 1
      */
-    @Override
     public void reverse(){
         if(length < 2){
             return;

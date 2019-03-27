@@ -1,7 +1,7 @@
 package com.hhx.sort.method;
 
 import com.hhx.sort.AbstractSort;
-import com.hhx.sort.IArrayFactory;
+import com.hhx.util.IArrayFactory;
 
 import java.util.Comparator;
 import java.util.function.Function;

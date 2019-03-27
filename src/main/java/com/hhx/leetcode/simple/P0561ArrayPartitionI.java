@@ -1,7 +1,7 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.RandomUtil;
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RandomUtil;
+import com.hhx.util.RunUtils;
 
 import java.util.Arrays;
 
@@ -26,7 +26,7 @@ import java.util.Arrays;
 public class P0561ArrayPartitionI {
 
     public static void main(String[] args) {
-        Utils.compareTime(100,
+        RunUtils.compareTime(100,
                 () -> new Solution().arrayPairSum(RandomUtil.randomIntArray(RandomUtil.randomEven(2, 10000), 0, 10000)),
                 () -> new Solution1().arrayPairSum(RandomUtil.randomIntArray(RandomUtil.randomEven(2, 10000), 0, 10000)));
     }

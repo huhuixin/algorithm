@@ -1,7 +1,5 @@
 package com.hhx.structure.array;
 
-import com.hhx.structure.Collection;
-
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -18,7 +16,7 @@ import java.util.stream.Stream;
  *
  * @author hhx
  */
-public abstract class AbstractArrayList<E> implements Collection<E> {
+public abstract class AbstractArrayList<E> {
 
     protected Object[] array;
     protected int length = 0;
@@ -33,17 +31,14 @@ public abstract class AbstractArrayList<E> implements Collection<E> {
         this.capacity = capacity;
     }
 
-    @Override
     public int size() {
         return length;
     }
 
-    @Override
     public boolean isEmpty() {
         return size() == 0;
     }
 
-    @Override
     public boolean contains(E o) {
         return indexOf(o) > -1;
     }

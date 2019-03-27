@@ -1,7 +1,7 @@
-package com.hhx.sort.factory.decorator;
+package com.hhx.util.factory.decorator;
 
-import com.hhx.sort.IArrayFactory;
-import com.hhx.sort.factory.AbstractArrayDecorator;
+import com.hhx.util.IArrayFactory;
+import com.hhx.util.factory.AbstractArrayDecorator;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,6 +1,9 @@
 package com.hhx.sort;
 
-import com.hhx.sort.factory.CustomArrayFactory;
+import com.hhx.util.ComparatorUtil;
+import com.hhx.util.factory.CustomArrayFactory;
+import com.hhx.util.Arrays;
+import com.hhx.util.IArrayFactory;
 import lombok.Getter;
 
 import java.util.Comparator;

@@ -1,6 +1,4 @@
-package com.hhx.leetcode.util;
-
-import com.sun.tools.javac.util.Assert;
+package com.hhx.util;
 
 import java.util.Random;
 
@@ -39,7 +37,6 @@ public class RandomUtil {
      * @return
      */
     public static int randomEven(int min, int max){
-        Assert.check(min % 2 == 0, "最小取值必须为偶数");
         int random = RandomHolder.RANDOM.nextInt(max - min) + min;
         return random % 2 == 0 ? random : random - 1;
     }

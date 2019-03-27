@@ -1,11 +1,10 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-import static com.hhx.leetcode.util.RandomUtil.*;
+import static com.hhx.util.RandomUtil.*;
 
 /**
  * 字符的最短距离
@@ -26,7 +25,7 @@ import static com.hhx.leetcode.util.RandomUtil.*;
 public class P0821ShortestDistanceToCharacter {
 
     public static void main(String[] args) {
-        Utils.compareTime(1000,
+        RunUtils.compareTime(1000,
                 () -> new Solution().shortestToChar(randomLetterString(randomInt(1, 10000)), randomLetter()),
                 () -> new Solution1().shortestToChar(randomLetterString(randomInt(1, 10000)), randomLetter())
                 );

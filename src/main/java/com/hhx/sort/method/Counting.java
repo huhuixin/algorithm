@@ -1,7 +1,7 @@
 package com.hhx.sort.method;
 
 import com.hhx.sort.AbstractSort;
-import com.hhx.sort.IArrayFactory;
+import com.hhx.util.IArrayFactory;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -58,7 +58,7 @@ public class Counting<E> extends AbstractSort<E> {
             // 计数器减1
             countArray[ai]--;
             System.out.println("added countArray: " + Arrays.toString(countArray));
-            System.out.println("status: " + com.hhx.sort.Arrays.toString(temp, showType));
+            System.out.println("status: " + com.hhx.util.Arrays.toString(temp, showType));
         }
         array = temp;
     }

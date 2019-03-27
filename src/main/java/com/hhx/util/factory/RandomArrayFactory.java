@@ -1,4 +1,4 @@
-package com.hhx.sort.factory;
+package com.hhx.util.factory;
 
 import java.util.function.Supplier;
 import java.util.stream.Stream;

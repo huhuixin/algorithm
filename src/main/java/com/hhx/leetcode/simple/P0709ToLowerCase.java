@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 /**
  * 实现String 的ToLowerCase方法
@@ -9,7 +9,7 @@ import com.hhx.leetcode.util.Utils;
 public class P0709ToLowerCase {
 
     public static void main(String[] args) {
-        Utils.countTime(() ->
+        RunUtils.countTime(() ->
             System.out.println(
                 new Solution().toLowerCase("HesLLds")
             )

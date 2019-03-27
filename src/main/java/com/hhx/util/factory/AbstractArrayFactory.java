@@ -1,6 +1,6 @@
-package com.hhx.sort.factory;
+package com.hhx.util.factory;
 
-import com.hhx.sort.IArrayFactory;
+import com.hhx.util.IArrayFactory;
 
 /**
  * 指定数组

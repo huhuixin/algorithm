@@ -1,4 +1,4 @@
-package com.hhx.sort;
+package com.hhx.util;
 
 /**
  * @author hhx

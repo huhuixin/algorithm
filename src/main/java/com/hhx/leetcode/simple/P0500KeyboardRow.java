@@ -1,6 +1,6 @@
 package com.hhx.leetcode.simple;
 
-import com.hhx.leetcode.util.Utils;
+import com.hhx.util.RunUtils;
 
 import java.util.*;
 
@@ -23,11 +23,11 @@ public class P0500KeyboardRow {
 
     public static void main(String[] args) {
         // 效率更高一点
-        Utils.averageTime(100, () -> {
+        RunUtils.averageTime(100, () -> {
             new Solution().
                     findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"});
         });
-        Utils.averageTime(100, () -> {
+        RunUtils.averageTime(100, () -> {
             new Solution1().
                     findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"});
         });

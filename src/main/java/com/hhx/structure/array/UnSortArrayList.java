@@ -23,7 +23,6 @@ public class UnSortArrayList<E> extends AbstractArrayList<E> {
         super(capacity);
     }
 
-    @Override
     public boolean add(E e) {
         // 扩容2倍
         newSize(length + 1);
@@ -50,7 +49,6 @@ public class UnSortArrayList<E> extends AbstractArrayList<E> {
         System.out.println("newSize: " + array.length);
     }
 
-    @Override
     public boolean remove(E o) {
         int index = indexOf(o);
         // 保证内存连续性, 不保证顺序, 移除之后选择最后一个元素补进来
