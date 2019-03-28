@@ -1,9 +1,11 @@
 package com.hhx.leetcode.util;
 
+import com.hhx.search.tree.IBinaryNode;
+
 /**
  * @author hhx
  */
-public class TreeNode {
+public class TreeNode implements IBinaryNode<Integer> {
 
     public int val;
     public TreeNode left;
@@ -56,5 +58,29 @@ public class TreeNode {
         FULL = new TreeNode(4, 2, 7);
         FULL.left.setLeftAndRight(1, 3);
         FULL.right.setLeftAndRight(6, 9);
+    }
+
+    @Override
+    public Integer getItem() {
+        return val;
+    }
+
+    @Override
+    public IBinaryNode<Integer> getLeft() {
+        return left;
+    }
+
+    @Override
+    public IBinaryNode<Integer> getRight() {
+        return right;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(TEST);
+        TEST.preOrder().forEach(System.out::print);
+        System.out.println();
+        TEST.posOrder().forEach(System.out::print);
+        System.out.println();
+        TEST.inOrder().forEach(System.out::print);
     }
 }
