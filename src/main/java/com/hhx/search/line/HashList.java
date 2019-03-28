@@ -1,4 +1,4 @@
-package com.hhx.search.method;
+package com.hhx.search.line;
 
 import com.hhx.search.AbstractSearch;
 

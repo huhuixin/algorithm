@@ -1,7 +1,7 @@
 package com.hhx.search;
 
 import com.hhx.entity.User;
-import com.hhx.search.method.Binary;
+import com.hhx.search.line.Binary;
 import com.hhx.util.IArrayFactory;
 import com.hhx.util.RandomUtil;
 import com.hhx.util.factory.RandomArrayFactory;

@@ -1,7 +1,7 @@
 package com.hhx.search;
 
 import com.hhx.entity.User;
-import com.hhx.search.method.HashList;
+import com.hhx.search.line.HashList;
 import com.hhx.util.RandomUtil;
 import org.junit.Test;
 
