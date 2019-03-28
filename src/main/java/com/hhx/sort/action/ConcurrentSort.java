@@ -1,6 +1,6 @@
 package com.hhx.sort.action;
 
-import com.hhx.leetcode.util.RandomUtil;
+import com.hhx.util.RandomUtil;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
