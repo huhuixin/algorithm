@@ -126,8 +126,8 @@ public class HashList<E> extends AbstractSearch<E> {
     @Override
     public String toString() {
         // 找到最大的树高
-        StringBuilder sb = new StringBuilder(128);
         int max = Arrays.stream(data).mapToInt(node -> node == null ? 0 : node.size()).max().orElse(0);
+        StringBuilder sb = new StringBuilder(length * (4 + max * 2));
         // head
         for (int i = 0; i < length; i++) {
             sb.append(i).append("\t");
